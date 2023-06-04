@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 echo "Installing dependencies"
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
-sudo pacman -Sy git --noconfirm --needed
+sudo pacman -Sy git base-devel --noconfirm --needed
 
 AUR_DIR=/home/$USER/aur-packages
 echo "Creating packages directory in $AUR_DIR"
