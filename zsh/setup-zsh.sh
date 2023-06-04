@@ -31,7 +31,7 @@ else
 fi
 
 echo "Applying .zshrc from configs directory"
-ZSH_RC_PATH=$SCRIPT_DIR/configs/.zshrc
+ZSH_RC_PATH=$SCRIPT_DIR/configs/zshrc-config
 if [ ! -f "$ZSH_RC_PATH" ]; then
 	echo ".zshrc config not found in configs directory, exiting..."
 	exit 1
