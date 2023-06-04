@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SCRIPT_DIR="$(pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 mkdir -p $SCRIPT_DIR/tmp
 
 echo "Installing pacman dependencies"

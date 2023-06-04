@@ -1,5 +1,5 @@
 #!/bin/sh
-SCRIPT_DIR="$(pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 DAEMON_CONF_PATH=/etc/pulse/daemon.conf
 
 echo "Creating backup of pulseaudio daemon.conf"
