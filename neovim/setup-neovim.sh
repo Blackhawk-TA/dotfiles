@@ -6,7 +6,7 @@ mkdir -p $SCRIPT_DIR/tmp
 echo "Installing pacman dependencies"
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
-sudo pacman -Sy git curl neovim python-pynvim texlive-core the_silver_searcher --noconfirm --needed
+sudo pacman -Sy git curl neovim nodejs npm python-pynvim texlive-core the_silver_searcher --noconfirm --needed
 
 echo "Installing vim-plug"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
