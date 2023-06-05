@@ -14,4 +14,24 @@ cp $SCRIPT_DIR/scripts/update.sh $AUR_DIR/update.sh
 chmod +x $AUR_DIR/update.sh
 
 echo "Cloning aur git repositories"
-echo "TODO: Implement"
+cd $AUR_DIR
+git clone https://aur.archlinux.org/aseprite.git
+git clone https://aur.archlinux.org/edmarketconnector.git
+git clone https://aur.archlinux.org/nvm.git
+git clone https://aur.archlinux.org/postman-bin.git
+git clone https://aur.archlinux.org/protontricks.git
+git clone https://aur.archlinux.org/tidal-hifi-bin.git
+git clone https://aur.archlinux.org/unixbench.git
+git clone https://aur.archlinux.org/xow-git.git
+
+echo "Installing aur packages"
+for dir in */; do
+	echo "Installing $dir"
+	cd $dir
+	git reset --hard
+	makepkg -si --noconfirm
+	cd ..
+done
+
+echo "Completed aur package installations"
+
