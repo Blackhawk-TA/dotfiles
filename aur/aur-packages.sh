@@ -17,6 +17,7 @@ echo "Cloning aur git repositories"
 cd $AUR_DIR
 git clone https://aur.archlinux.org/aseprite.git
 git clone https://aur.archlinux.org/edmarketconnector.git
+git clone https://aur.archlinux.org/imagewriter.git
 git clone https://aur.archlinux.org/nvm.git
 git clone https://aur.archlinux.org/postman-bin.git
 git clone https://aur.archlinux.org/protontricks.git
