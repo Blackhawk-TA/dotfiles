@@ -1,0 +1,14 @@
+[Unit]
+Description=AIO startup service
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target default.target
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl initialize all
+ExecStart=liquidctl --match H100i set pump speed 90
+ExecStart=liquidctl --match H100i set fan speed  20 30  30 40  35 50  38 70  40 80  42 100
+ExecStart=liquidctl --match H100i set led color fixed ff0000
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target default.target
+
