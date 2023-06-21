@@ -74,6 +74,7 @@ plugins=(
 	git
 	postgres
 	dirhistory
+	z
 )
 
 source $ZSH/oh-my-zsh.sh
