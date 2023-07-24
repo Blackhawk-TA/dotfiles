@@ -35,5 +35,5 @@ sudo umount /dev/mapper/$UUID
 # Encrypt drive
 sudo cryptsetup luksClose /dev/mapper/$UUID
 
-echo "Successfully completed user data backup"
+echo "Successfully completed user data restore from backup"
 
