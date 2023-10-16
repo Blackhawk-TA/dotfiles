@@ -21,7 +21,6 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 # Create backup
 TARGET_DIR=$MOUNT_DIR/server-backup
 sudo rsync -avhP --delete $TARGET_DIR/.docker/. /home/$USER/.docker
-sudo rsync -avhP --delete $TARGET_DIR/csgo-data/. /home/$USER/csgo-data
 sudo rsync -avhP --delete $TARGET_DIR/valheim-server/. /home/$USER/valheim-server
 sudo rsync -avhP --delete $TARGET_DIR/media/. /media
 

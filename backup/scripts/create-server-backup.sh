@@ -23,7 +23,6 @@ TARGET_DIR=$MOUNT_DIR/server-backup
 mkdir -p $TARGET_DIR
 
 sudo rsync -avhP --delete /home/$USER/.docker $TARGET_DIR
-sudo rsync -avhP --delete /home/$USER/csgo-data $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/valheim-server $TARGET_DIR
 sudo rsync -avhP --delete /media $TARGET_DIR
 
