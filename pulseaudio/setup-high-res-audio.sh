@@ -13,6 +13,8 @@ echo "Copying scripts for switching bitrate to $AUDIO_SCRIPTS_DIR"
 mkdir -p $AUDIO_SCRIPTS_DIR
 cp $SCRIPT_DIR/scripts/hi-res-audio.sh $AUDIO_SCRIPTS_DIR/hi-res-audio.sh
 chmod +x $AUDIO_SCRIPTS_DIR/hi-res-audio.sh
+cp $SCRIPT_DIR/scripts/mid-res-audio.sh $AUDIO_SCRIPTS_DIR/mid-res-audio.sh
+chmod +x $AUDIO_SCRIPTS_DIR/mid-res-audio.sh
 cp $SCRIPT_DIR/scripts/low-res-audio.sh $AUDIO_SCRIPTS_DIR/low-res-audio.sh
 chmod +x $AUDIO_SCRIPTS_DIR/low-res-audio.sh
 
