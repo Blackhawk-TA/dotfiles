@@ -11,6 +11,11 @@ gpgconf --launch gpg-agent
 # Set wayland env variable
 #export QT_QPA_PLATFORM=wayland
 
+# Enable zsh autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
+ZSG_AUTOSUGGEST_STRATEGY=(history completion zpty)
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
