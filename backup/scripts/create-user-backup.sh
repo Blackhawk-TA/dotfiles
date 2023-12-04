@@ -27,6 +27,7 @@ sudo rsync -avhP --delete /home/$USER/.gitconfig $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/.ssh/config $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/.gnupg $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/.ideavimrc $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/.config/unity3d $TARGET_DIR
 
 # Documents
 sudo rsync -avhP --delete /home/$USER/CLionProjects $TARGET_DIR
