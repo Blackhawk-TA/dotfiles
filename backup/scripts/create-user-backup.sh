@@ -22,7 +22,13 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 TARGET_DIR=$MOUNT_DIR/arch-backup
 mkdir -p $TARGET_DIR
 
+# Configs
+sudo rsync -avhP --delete /home/$USER/.gitconfig $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/.ssh/config $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/.gnupg $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/.ideavimrc $TARGET_DIR
+
+# Documents
 sudo rsync -avhP --delete /home/$USER/CLionProjects $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/Desktop $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/Documents $TARGET_DIR

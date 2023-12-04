@@ -11,7 +11,7 @@ echo "Generate locale en_US.UTF-8"
 sudo locale-gen en_US.UTF-8
 
 echo "Installing zsh"
-sudo pacman -Sy zsh --noconfirm --needed
+sudo pacman -Sy zsh zsh-syntax-highlighting zsh-autosuggestions --noconfirm --needed
 
 echo "Setting zsh as default shell"
 ZSH_PATH=/usr/bin/zsh
