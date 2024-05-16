@@ -11,7 +11,7 @@ if [ -z "$DISK_PATH" ]; then
 fi
 
 # Decrypt drive
-sudo cryptsetup luksOpen $DISK_PATH $UUID 
+sudo cryptsetup luksOpen $DISK_PATH $UUID
 
 # Create mounting point and mount disk
 MOUNT_DIR=/home/$USER/backup/disk
@@ -22,6 +22,7 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 TARGET_DIR=$MOUNT_DIR/server-backup
 sudo rsync -avhP --delete $TARGET_DIR/.docker/. /home/$USER/.docker
 sudo rsync -avhP --delete $TARGET_DIR/valheim-server/. /home/$USER/valheim-server
+sudo rsync -avhP --delete $TARGET_DIR/minecraft-server/. /home/$USER/minecraft-server
 sudo rsync -avhP --delete $TARGET_DIR/media/. /media
 
 # Unmount drive
