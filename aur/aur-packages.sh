@@ -27,7 +27,7 @@ git clone https://aur.archlinux.org/proton-ge-custom-bin.git
 git clone https://aur.archlinux.org/protontricks.git
 git clone https://aur.archlinux.org/tidal-hifi-bin.git
 git clone https://aur.archlinux.org/unixbench.git
-git clone https://aur.archlinux.org/xone-dkms-git.git
+git clone https://aur.archlinux.org/xone-dkms.git
 git clone https://aur.archlinux.org/xone-dongle-firmware.git
 
 echo "Installing aur packages"
