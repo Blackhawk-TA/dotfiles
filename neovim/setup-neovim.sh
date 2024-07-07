@@ -9,16 +9,15 @@ sudo pacman -Syu --noconfirm --needed
 sudo pacman -Sy git curl neovim nodejs npm python-pynvim fd ripgrep --noconfirm --needed
 
 echo "Installing fonts"
-sudo pacman -Sy ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono
+sudo pacman -Sy ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm --needed
 
-echo "Downloading nvim config"
-cd tmp
-git clone https://github.com/Blackhawk-TA/nvim.git
+echo "Clone nvim config"
+cd tmp || exit 1
+git clone git@github.com:Blackhawk-TA/nvim.git
 mv nvim /home/$USER/.config/nvim
-cd $SCRIPT_DIR
+cd $SCRIPT_DIR || exit 1
 
 echo "Deleting tmp files"
 rm -rf $SCRIPT_DIR/tmp
 
 echo "nvim setup completed"
-
