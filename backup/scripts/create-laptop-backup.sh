@@ -11,7 +11,7 @@ if [ -z "$DISK_PATH" ]; then
 fi
 
 # Decrypt drive
-sudo cryptsetup luksOpen $DISK_PATH $UUID 
+sudo cryptsetup luksOpen $DISK_PATH $UUID
 
 # Create mounting point and mount disk
 MOUNT_DIR=/home/$USER/backup/disk
@@ -19,7 +19,7 @@ mkdir -p $MOUNT_DIR
 sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 
 # Create backup
-TARGET_DIR=$MOUNT_DIR/arch-backup
+TARGET_DIR=$MOUNT_DIR/arch-laptop-backup
 mkdir -p $TARGET_DIR
 
 # Configs
