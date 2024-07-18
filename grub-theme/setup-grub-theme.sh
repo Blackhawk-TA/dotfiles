@@ -39,4 +39,4 @@ echo "GRUB_THEME="/boot/grub/themes/vimix/theme.txt"" | sudo tee -a $GRUB_CONF
 echo "Updating grub"
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-echo "grup theme setup completed"
+echo "grub theme setup completed"
