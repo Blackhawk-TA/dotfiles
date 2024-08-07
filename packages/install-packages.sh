@@ -10,5 +10,5 @@ echo "Installing development related packages"
 sudo pacman -Sy tiled vi go --noconfirm --needed
 
 echo "Installing utility packages"
-sudo pacman -Sy firefox tree signal-desktop nextcloud-client vlc wget unzip --noconfirm --needed
+sudo pacman -Sy firefox tree signal-desktop nextcloud-client vlc wget unzip fzf --noconfirm --needed
 
