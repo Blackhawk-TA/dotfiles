@@ -3,8 +3,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # Install dependencies
-sudo pacman -Sy archlinux-keyring --noconfirm --needed
-sudo pacman -Sy rsync cryptsetup --noconfirm --needed
+sudo apt-get update
+sudo apt-get install -y rsync cryptsetup
 
 # Create backup directory
 mkdir -p /home/$USER/backup
