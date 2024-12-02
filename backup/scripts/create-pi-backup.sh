@@ -11,7 +11,7 @@ if [ -z "$DISK_PATH" ]; then
 fi
 
 # Decrypt drive
-sudo cryptsetup luksOpen $DISK_PATH $UUID 
+sudo cryptsetup luksOpen $DISK_PATH $UUID
 
 # Create mounting point and mount disk
 MOUNT_DIR=/home/$USER/backup/disk
