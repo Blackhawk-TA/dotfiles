@@ -25,12 +25,10 @@ TARGET_DIR=$MOUNT_DIR/arch-laptop-backup
 sudo rsync -avhP --delete $TARGET_DIR/.gitconfig /home/$USER/.gitconfig
 sudo rsync -avhP --delete $TARGET_DIR/.ssh/config /home/$USER/.ssh/config
 sudo rsync -avhP --delete $TARGET_DIR/.gnupg /home/$USER/.gnupg
-sudo rsync -avhP --delete $TARGET_DIR/.ideavimrc /home/$USER/.ideavimrc
 sudo rsync -avhP --delete $TARGET_DIR/.config/unity3d /home/$USER/.config/unity3d
 sudo rsync -avhP --delete $TARGET_DIR/.local/share/konsole /home/$USER/.local/share/konsole
 
 # Documents
-sudo rsync -avhP --delete $TARGET_DIR/CLionProjects/. /home/$USER/CLionProjects
 sudo rsync -avhP --delete $TARGET_DIR/Desktop/. /home/$USER/Desktop
 sudo rsync -avhP --delete $TARGET_DIR/Documents/. /home/$USER/Documents
 sudo rsync -avhP --delete $TARGET_DIR/git/. /home/$USER/git

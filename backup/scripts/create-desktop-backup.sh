@@ -24,11 +24,11 @@ mkdir -p $TARGET_DIR
 
 # Configs
 sudo rsync -avhP --delete /home/$USER/.gitconfig $TARGET_DIR
-sudo rsync -avhP --delete /home/$USER/.ssh/config $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/.ssh/config $TARGET_DIR./ssh
 sudo rsync -avhP --delete /home/$USER/.gnupg $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/.ideavimrc $TARGET_DIR
-sudo rsync -avhP --delete /home/$USER/.config/unity3d $TARGET_DIR
-sudo rsync -avhP --delete /home/$USER/.local/share/konsole $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/.config/unity3d $TARGET_DIR/.config
+sudo rsync -avhP --delete /home/$USER/.local/share/konsole $TARGET_DIR./local/share
 
 # Documents
 sudo rsync -avhP --delete /home/$USER/CLionProjects $TARGET_DIR
