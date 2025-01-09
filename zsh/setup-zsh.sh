@@ -45,7 +45,6 @@ if [ ! -f "$ZSH_RC_PATH" ]; then
 	exit 1
 fi
 cp $ZSH_RC_PATH $HOME/.zshrc
-source $HOME/.zshrc
 
 echo "zsh setup completed, reload terminal to see effects"
 
