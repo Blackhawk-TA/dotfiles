@@ -12,6 +12,8 @@ echo "Creating packages directory in $AUR_DIR"
 mkdir $AUR_DIR
 cp $SCRIPT_DIR/scripts/update.sh $AUR_DIR/update.sh
 chmod +x $AUR_DIR/update.sh
+cp $SCRIPT_DIR/scripts/cleanup.sh $AUR_DIR/cleanup.sh
+chmod +x $AUR_DIR/cleanup.sh
 
 echo "Cloning aur git repositories"
 cd $AUR_DIR
