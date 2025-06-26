@@ -22,6 +22,7 @@ git clone https://aur.archlinux.org/bruno-bin.git
 git clone https://aur.archlinux.org/edmarketconnector.git
 git clone https://aur.archlinux.org/golangci-lint.git
 git clone https://aur.archlinux.org/imagewriter.git
+git clone https://aur.archlinux.org/informant.git
 git clone https://aur.archlinux.org/jetbrains-toolbox.git
 git clone https://aur.archlinux.org/minecraft-launcher.git
 git clone https://aur.archlinux.org/proton-ge-custom-bin.git
