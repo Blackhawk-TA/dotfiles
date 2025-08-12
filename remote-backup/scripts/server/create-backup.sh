@@ -14,7 +14,7 @@ mkdir -p "${RESTIC_CACHE_DIR}"
 
 # Run backup
 restic unlock
-restic backup \
+restic backup --tag=automated \
 	/home/server/.docker \
 	/home/server/valheim-server \
 	/home/server/minecraft-server \
@@ -22,3 +22,4 @@ restic backup \
 	/media
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 3
+restic cache --cleanup
