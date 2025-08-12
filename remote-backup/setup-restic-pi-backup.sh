@@ -3,7 +3,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # Install dependencies
-sudo apt-get updaet
+sudo apt-get update
 sudo apt-get install restic -y
 
 # Create backup directory

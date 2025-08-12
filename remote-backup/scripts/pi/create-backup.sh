@@ -7,16 +7,16 @@ if pgrep -f 'restic backup' >/dev/null; then
 fi
 
 # Load restic credentials
-source $HOME/remote-backup/restic-env.sh
+source /home/pi/remote-backup/restic-env.sh
 
-export RESTIC_CACHE_DIR="$HOME/.cache/restic"
+export RESTIC_CACHE_DIR="/home/pi/.cache/restic"
 mkdir -p "${RESTIC_CACHE_DIR}"
 
 # Run backup
 restic unlock
 restic backup \
-	$HOME/uptime-kuma \
-	$HOME/nas \
-	$HOME/pihole-backup.tar.gz
+	/home/pi/uptime-kuma \
+	/home/pi/nas \
+	/home/pi/pihole-backup.tar.gz
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 3
