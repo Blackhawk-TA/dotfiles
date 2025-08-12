@@ -23,6 +23,7 @@ TARGET_DIR=$MOUNT_DIR/server-backup
 sudo rsync -avhP --delete $TARGET_DIR/.docker/. /home/$USER/.docker
 sudo rsync -avhP --delete $TARGET_DIR/valheim-server/. /home/$USER/valheim-server
 sudo rsync -avhP --delete $TARGET_DIR/minecraft-server/. /home/$USER/minecraft-server
+sudo rsync -avhP --delete $TARGET_DIR/itemdrop/. /home/$USER/itemdrop
 sudo rsync -avhP --delete $TARGET_DIR/media/. /media
 
 # Unmount drive
@@ -32,4 +33,3 @@ sudo umount /dev/mapper/$UUID
 sudo cryptsetup luksClose /dev/mapper/$UUID
 
 echo "Successfully completed server data restore from backup"
-
