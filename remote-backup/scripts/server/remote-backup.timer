@@ -1,0 +1,10 @@
+[Unit]
+Description=Run remote backup script at 4am daily
+
+[Timer]
+OnCalendar=*-*-* 05:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

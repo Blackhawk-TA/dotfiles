@@ -1,0 +1,9 @@
+[Unit]
+Description=Nightly remote backup job
+
+[Service]
+Type=oneshot
+ExecStart=/home/server/remote-backup/create-backup.sh
+User=root
+Group=root
+
