@@ -18,8 +18,8 @@ echo "Copied backup scripts to /home/$USER/remote-backup"
 echo "Please edit /home/$USER/remote-backup/restic-env.sh to set your restic credentials"
 
 # Copy systemd service
-cp $SCRIPT_DIR/pi/restic-backup.service /etc/systemd/system/restic-backup.service
-cp $SCRIPT_DIR/pi/restic-backup.timer /etc/systemd/system/restic-backup.timer
+cp $SCRIPT_DIR/scripts/pi/restic-backup.service /etc/systemd/system/restic-backup.service
+cp $SCRIPT_DIR/scripts/pi/restic-backup.timer /etc/systemd/system/restic-backup.timer
 
 # Enable sustemd service
 sudo systemctl daemon-reload
