@@ -2,14 +2,14 @@
 
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
-	echo "Please run as root"
-	exit
+	echo "Please run this script as root" 1>&2
+	exit 1
 fi
 
 # Ensure no other backup process is running
-if pgrep -f 'restic backup' >/dev/null; then
-	echo 'restic is already running...' 1>&2
-	exit 0
+if pgrep -f "restic backup" >/dev/null; then
+	echo "restic is already running..." 1>&2
+	exit 1
 fi
 
 # Load restic credentials
