@@ -20,7 +20,8 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 
 # Backup PiHole
 echo "Creating PiHole backup"
-pihole -a -t /home/$USER/pihole-backup.tar.gz
+sudo pihole-FTL --teleporter
+mv pi-hole_pi-server_teleporter_* /home/$USER/pihole-backup.zip
 
 # Create backup of files/directories
 TARGET_DIR=$MOUNT_DIR/pi-backup
@@ -28,7 +29,7 @@ mkdir -p $TARGET_DIR
 
 sudo rsync -avhP --delete /home/$USER/uptime-kuma $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/nas $TARGET_DIR
-sudo rsync -avhP --delete /home/$USER/pihole-backup.tar.gz $TARGET_DIR
+sudo rsync -avhP --delete /home/$USER/pihole-backup.zip $TARGET_DIR
 
 # Unmount drive
 sudo umount /dev/mapper/$UUID
@@ -37,4 +38,3 @@ sudo umount /dev/mapper/$UUID
 sudo cryptsetup luksClose /dev/mapper/$UUID
 
 echo "Successfully completed pi backup"
-

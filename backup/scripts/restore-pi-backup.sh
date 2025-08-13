@@ -22,7 +22,7 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 TARGET_DIR=$MOUNT_DIR/pi-backup
 sudo rsync -avhP --delete $TARGET_DIR/uptime-kuma/. /home/$USER/uptime-kuma
 sudo rsync -avhP --delete $TARGET_DIR/nas/. /home/$USER/nas
-sudo rsync -avhP --delete $TARGET_DIR/pihole-backup.tar.gz /home/$USER/pihole-backup.tar.gz
+sudo rsync -avhP --delete $TARGET_DIR/pihole-backup.zip /home/$USER/pihole-backup.zip
 
 # Unmount drive
 sudo umount /dev/mapper/$UUID
@@ -31,4 +31,3 @@ sudo umount /dev/mapper/$UUID
 sudo cryptsetup luksClose /dev/mapper/$UUID
 
 echo "Successfully completed pi data restore from backup"
-
