@@ -15,7 +15,7 @@ fi
 # Load restic credentials
 source /home/server/remote-backup/restic-env.sh
 
-export RESTIC_CACHE_DIR="$HOME/.cache/restic"
+export RESTIC_CACHE_DIR="/root/.cache/restic"
 mkdir -p "${RESTIC_CACHE_DIR}"
 
 # Run backup
