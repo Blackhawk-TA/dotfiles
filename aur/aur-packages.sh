@@ -17,7 +17,9 @@ chmod +x $AUR_DIR/cleanup.sh
 
 echo "Cloning aur git repositories"
 cd $AUR_DIR
+git clone https://aur.archlinux.org/aic94xx-firmware.git
 git clone https://aur.archlinux.org/aseprite.git
+git clone https://aur.archlinux.org/ast-firmware.git
 git clone https://aur.archlinux.org/bruno-bin.git
 git clone https://aur.archlinux.org/edmarketconnector.git
 git clone https://aur.archlinux.org/golangci-lint.git
@@ -28,11 +30,15 @@ git clone https://aur.archlinux.org/joplin-bin.git
 git clone https://aur.archlinux.org/minecraft-launcher.git
 git clone https://aur.archlinux.org/proton-ge-custom-bin.git
 git clone https://aur.archlinux.org/protontricks.git
+git clone https://aur.archlinux.org/python-vdf.git
 git clone https://aur.archlinux.org/tidal-hifi-bin.git
 git clone https://aur.archlinux.org/umlet.git
 git clone https://aur.archlinux.org/unixbench.git
+git clone https://aur.archlinux.org/wd719x-firmware.git
+git clone https://aur.archlinux.org/woeusb-ng.git
 git clone https://aur.archlinux.org/xone-dkms.git
 git clone https://aur.archlinux.org/xone-dongle-firmware.git
+git clone https://aur.archlinux.org/zsh-vi-mode.git
 
 echo "Installing aur packages"
 for dir in */; do
