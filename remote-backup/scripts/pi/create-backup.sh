@@ -13,7 +13,7 @@ if pgrep -f "restic backup" >/dev/null; then
 fi
 
 # Load restic credentials
-source /home/pi/remote-backup/restic-env.sh
+source /root/.restic-env.sh
 
 export RESTIC_CACHE_DIR="/root/.cache/restic"
 mkdir -p "${RESTIC_CACHE_DIR}"

@@ -10,12 +10,16 @@ sudo apt-get install restic -y
 mkdir -p /home/$USER/remote-backup
 
 # Copy backup scripts
-cp $SCRIPT_DIR/scripts/restic-env.sh /home/$USER/remote-backup/restic-env.sh
+cp $SCRIPT_DIR/scripts/restic-env.sh /root/.restic-env.sh
 cp $SCRIPT_DIR/scripts/restore-backup.sh /home/$USER/remote-backup/restore-backup.sh
 cp $SCRIPT_DIR/scripts/pi/create-backup.sh /home/$USER/remote-backup/create-backup.sh
 
+# Set permissions of restic env
+sudo chmod 700 /root/.restic-env.sh
+sudo chown root:root /root/.restic.sh
+
 echo "Copied backup scripts to /home/$USER/remote-backup"
-echo "Please edit /home/$USER/remote-backup/restic-env.sh to set your restic credentials"
+echo "Please edit /root/.restic-env.sh to set your restic credentials"
 
 # Copy systemd service
 sudo cp $SCRIPT_DIR/scripts/pi/restic-backup.service /etc/systemd/system/restic-backup.service
