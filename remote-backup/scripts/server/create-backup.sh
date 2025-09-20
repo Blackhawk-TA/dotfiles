@@ -29,3 +29,4 @@ restic backup --tag=automated \
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 3
 restic cache --cleanup
+restic prune
