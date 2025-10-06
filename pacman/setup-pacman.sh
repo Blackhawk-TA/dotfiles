@@ -3,6 +3,12 @@
 echo "Installing reflector for mirrorlist updates"
 sudo pacman -Sy reflector --noconfirm --needed
 
+echo "Installing pacman utils"
+sudo pacman -Sy pacman-contrib
+
+echo "Enabling cache cleanup service"
+sudo systemctl enable --now paccache.timer
+
 echo "Updating pacman config"
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf
 sudo sed -i -e '/^#\[multilib\]/s/^#//' -e '/^\[multilib\]/{n;s/^#//}' /etc/pacman.conf
