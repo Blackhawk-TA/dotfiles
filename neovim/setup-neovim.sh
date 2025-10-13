@@ -6,10 +6,11 @@ mkdir -p $SCRIPT_DIR/tmp
 echo "Installing pacman dependencies"
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
-sudo pacman -Sy git curl neovim wl-clipboard xclip nodejs npm python-pynvim fd ripgrep go unzip lazygit luarocks --noconfirm --needed
+sudo pacman -Sy git curl neovim wl-clipboard xclip nodejs npm python-pynvim fd ripgrep go unzip lazygit luarocks rust --noconfirm --needed
 
 echo "Installing other dependencies"
 sudo npm install -g swagger-ui-watcher
+cargo install --locked tree-sitter-cli
 
 echo "Installing fonts"
 sudo pacman -Sy ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono --noconfirm --needed
