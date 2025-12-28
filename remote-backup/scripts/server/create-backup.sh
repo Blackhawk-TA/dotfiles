@@ -28,6 +28,7 @@ restic backup --tag=automated \
 	/etc/apache2/httpd.conf \
 	/etc/apache2/conf.d/nextcloud.conf \
 	/etc/apache2/conf.d/website.conf \
+	/etc/ddclient/ddclient.conf \
 	/media
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 3

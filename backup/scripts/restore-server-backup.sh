@@ -28,10 +28,11 @@ sudo rsync -avhP --delete $TARGET_DIR/minecraft-server/. /home/$USER/minecraft-s
 sudo rsync -avhP --delete $TARGET_DIR/itemdrop/. /home/$USER/itemdrop
 sudo rsync -avhP --delete $TARGET_DIR/media/. /media
 
-# Apache2 configs
+# Configs
 sudo rsync -avhP --delete $TARGET_DIR/httpd.conf /etc/apache2/httpd.conf
 sudo rsync -avhP --delete $TARGET_DIR/nextcloud.conf /etc/apache2/conf.d/nextcloud.conf
 sudo rsync -avhP --delete $TARGET_DIR/website.conf /etc/apache2/conf.d/website.conf
+sudo rsync -avhP --delete $TARGET_DIR/ddclient.conf /etc/ddclient/ddclient.conf
 
 # Unmount drive
 sudo umount /dev/mapper/$UUID
