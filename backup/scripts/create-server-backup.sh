@@ -22,11 +22,17 @@ sudo mount -o compress=zstd /dev/mapper/$UUID $MOUNT_DIR
 TARGET_DIR=$MOUNT_DIR/server-backup
 mkdir -p $TARGET_DIR
 
+# User files
 sudo rsync -avhP --delete /home/$USER/.docker $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/valheim-server $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/minecraft-server $TARGET_DIR
 sudo rsync -avhP --delete /home/$USER/itemdrop $TARGET_DIR
 sudo rsync -avhP --delete /media $TARGET_DIR
+
+# Apache2 configs
+sudo rsync -avhP --delete /etc/apache2/httpd.conf $TARGET_DIR
+sudo rsync -avhP --delete /etc/apache2/conf.d/nextcloud.conf $TARGET_DIR
+sudo rsync -avhP --delete /etc/apache2/conf.d/website.conf $TARGET_DIR
 
 # Unmount drive
 sudo umount /dev/mapper/$UUID
