@@ -26,6 +26,7 @@ sudo rsync -avhP --delete $TARGET_DIR/.docker/. /home/$USER/.docker
 sudo rsync -avhP --delete $TARGET_DIR/valheim-server/. /home/$USER/valheim-server
 sudo rsync -avhP --delete $TARGET_DIR/minecraft-server/. /home/$USER/minecraft-server
 sudo rsync -avhP --delete $TARGET_DIR/itemdrop/. /home/$USER/itemdrop
+sudo rsync -avhP --delete $TARGET_DIR/scripts/. /home/$USER/scripts
 sudo rsync -avhP --delete $TARGET_DIR/media/. /media
 
 # Configs

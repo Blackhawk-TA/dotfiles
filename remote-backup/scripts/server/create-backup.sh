@@ -25,6 +25,7 @@ restic backup --tag=automated \
 	/home/server/valheim-server \
 	/home/server/minecraft-server \
 	/home/server/itemdrop \
+	/home/server/scripts \
 	/etc/apache2/httpd.conf \
 	/etc/apache2/conf.d/nextcloud.conf \
 	/etc/apache2/conf.d/website.conf \
