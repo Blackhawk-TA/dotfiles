@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
 	echo "Please run this script as root" 1>&2
@@ -17,6 +19,9 @@ source /root/.restic-env.sh
 
 export RESTIC_CACHE_DIR="/root/.cache/restic"
 mkdir -p "${RESTIC_CACHE_DIR}"
+
+# Create nextcloud database dump file in /home/server/scripts directory
+/bin/bash /home/server/scripts/nextcloud-db-backup.sh
 
 # Run backup
 restic unlock
