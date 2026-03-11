@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 
+# Export mason binaries from nvim
+export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
+
 # Auto start in tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
