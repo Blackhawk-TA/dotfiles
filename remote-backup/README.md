@@ -30,3 +30,9 @@ Unmount storage box:
 ```bash
 fusermount -u /mnt/storagebox
 ```
+
+## Check snapshot status
+
+To be able to check the snapshot status using dashboards like uptime-kuma,
+the [restic-status](https://gitlab.com/Blackhawk312/restic-status) server can be installed.
+

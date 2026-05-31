@@ -30,3 +30,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now restic-backup.timer
 
 echo "Restic backup systemd service enabled and started"
+echo "To install the restic status server, read the docs at: https://gitlab.com/Blackhawk312/restic-status"
