@@ -4,7 +4,7 @@ sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
 
 echo "Installing gaming related packages"
-sudo pacman -Sy teamspeak3 steam steam-native-runtime --noconfirm --needed
+sudo pacman -Sy teamspeak3 steam steam-native-runtime protontricks --noconfirm --needed
 
 echo "Installing development related packages"
 sudo pacman -Sy tiled vi go nvm --noconfirm --needed
