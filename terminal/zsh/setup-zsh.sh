@@ -10,8 +10,8 @@ sudo pacman -Sy curl git --noconfirm --needed
 echo "Generate locale en_US.UTF-8"
 sudo locale-gen en_US.UTF-8
 
-echo "Installing zsh"
-sudo pacman -Sy zsh zsh-syntax-highlighting zsh-autosuggestions --noconfirm --needed
+echo "Installing zsh + starship"
+sudo pacman -Sy zsh zsh-syntax-highlighting zsh-autosuggestions starship --noconfirm --needed
 
 echo "Setting zsh as default shell"
 ZSH_PATH=/usr/bin/zsh
@@ -46,5 +46,13 @@ if [ ! -f "$ZSH_RC_PATH" ]; then
 fi
 cp $ZSH_RC_PATH $HOME/.zshrc
 
-echo "zsh setup completed, reload terminal to see effects"
+echo "Applying starship config from configs directory"
+STARSHIP_PATH=$SCRIPT_DIR/configs/starship.toml
+if [ ! -f "$STARSHIP_PATH" ]; then
+	echo "starship.toml config not found in configs directory, exiting..."
+	exit 1
+fi
+cp $STARSHIP_PATH $HOME/.config/starship.toml
 
+echo "zsh setup completed, reloading terminal to apply effects"
+source $HOME/.zshrc
