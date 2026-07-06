@@ -70,6 +70,7 @@ style = "bg:red fg:crust"
 style = "bg:peach fg:crust"
 format = "[ $path ]($style)"
 truncate_to_repo = false
+truncation_length = 0
 
 [git_branch]
 symbol = ""
