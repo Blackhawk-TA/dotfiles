@@ -13,6 +13,7 @@ echo "Update database"
 sudo touch /var/log/clamav/freshclam.log
 sudo chmod 600 /var/log/clamav/freshclam.log
 sudo chown clamav /var/log/clamav/freshclam.log
+sudo freshclam
 
 sudo systemctl enable clamav-freshclam.service
 sudo systemctl start clamav-freshclam.service
